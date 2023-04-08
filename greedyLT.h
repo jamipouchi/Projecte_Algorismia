@@ -8,28 +8,8 @@ vector<int> greedy_until(Graph &graph, float r, float completion_ratio)
     for (int i = 0; i < graph.size(); i++)
     {
         vertexs[i] = i;
-        // degrees[i] = graph[i].size();
     }
-    /* for (int i = 0; i < vertexs.size(); i++)
-    {
-        int max_degree = -1;
-        int max_idx = -1;
-        for (int vertex = 0; vertex < degrees.size(); vertex++)
-        {
-            if (degrees[vertex] > max_degree)
-            {
-                max_degree = degrees[vertex];
-                max_idx = vertex;
-            }
-        }
-        degrees[i] = -1;
-        for (int neighbor : graph[vertexs[i]])
-        {
-            degrees[neighbor] -= 1;
-        }
-    } */
 
-    // int perfect_neighbors = int(r * float(graph.size()));
 
     sort(vertexs.begin(), vertexs.end(), [&](int a, int b)
          //{ return abs(int(graph[a].size() - perfect_neighbors)) < abs(int(graph[b].size() - perfect_neighbors)); });

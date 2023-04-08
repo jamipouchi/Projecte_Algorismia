@@ -1,4 +1,4 @@
-#include "localSearchLT.h"
+#include "greedyLT.h"
 #include <chrono>
 
 int main(int argc, char const *argv[])
@@ -9,12 +9,12 @@ int main(int argc, char const *argv[])
 
     //let's count the time of the metod greedy
     auto ini = chrono::high_resolution_clock::now();
-    vector<int> S = localSearch(graph, r);
+    vector<int> S = greedy(graph, r);
     auto fi = chrono::high_resolution_clock::now();
     auto temps = chrono::duration_cast<chrono::microseconds>(fi - ini);
 
     //print the time in seconds
-    cout << "ALGORITME: LOCAL SEARCH" << endl;
+    cout << "ALGORITME: GREEDY" << endl;
     cout << "INPUT: " << filename << endl;
     cout << "OUTPUT: " << endl;
     cout << "\t#S = " << S.size() << endl;
