@@ -7,7 +7,6 @@ vector<int> localSearch(Graph g, float r)
     vector<int> S = greedy_until(g, r, 1.0);
     cout << "greedy finished" << endl;
 
-    int old_size = S.size();
 
     //parametres simmulated annealing
     int n = g.size();
@@ -25,6 +24,9 @@ vector<int> localSearch(Graph g, float r)
 
         vector<int> S_new = S;
 
+        //SHA DE FER BE AIXO
+
+
         //sha de calclar una aproximacio de la solucio que sigui valida
         //el que hi ha no esta be
         /* EL QUE HI HAVIA ABANS
@@ -39,7 +41,7 @@ vector<int> localSearch(Graph g, float r)
         do {
             //chanche S_new
 
-        } while ( LT(g, S_new, r) != n )
+        } while ( LT(g, S_new, r) != n );
 
         int delta = (S_new.size() - S.size());;
         float p = exp(delta / T);
@@ -64,7 +66,6 @@ vector<int> localSearch(Graph g, float r)
         }
         T *= alpha;
         iter++;
-        old_size = new_size;
     }
     cout << "T: " << T << endl;
     cout << "iter: " << iter << endl;
