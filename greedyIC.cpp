@@ -20,7 +20,7 @@ vector<int> greedyFunction(Graph& graph, vector<int>& nodesActivats, vector<int>
         if (nodesReached == graph.size()) return conjS;
 
 
-        if (conjS.size() < nodesActivats.size()) conjS.push_back(nodesActivats[i++]);
+        if (i < nodesActivats.size()) conjS.push_back(nodesActivats[i++]);
         else conjS.push_back(nodesNoActivats[j++]);
         
     }
