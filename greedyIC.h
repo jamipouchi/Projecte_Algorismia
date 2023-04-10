@@ -20,11 +20,12 @@ vector<int> greedyFunction(Graph& graph, float diffusionProbability) {
     while (nodesReached < graph.size() && i != nodes.size()) {
 
         int newNodesReached = independentCascade(graph, conjS, diffusionProbability);
-        cout << "newNodesReached = " << newNodesReached << endl;
+        //cout << "newNodesReached = " << newNodesReached << endl;
 
         if (newNodesReached > nodesReached) nodesReached = newNodesReached;
 
-        cout << "i: " << i << endl;
+        //cout << "i: " << i << endl;
+        if (newNodesReached == graph.size()) return conjS;
 
         conjS.push_back(nodes[i++]);
         

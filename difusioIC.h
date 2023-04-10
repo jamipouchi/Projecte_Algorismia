@@ -15,7 +15,7 @@ int independentCascade(Graph& graph, vector<int>& nodesActivats, float diffusion
 
     while (!nodesPerTractar.empty()) {
         int node = nodesPerTractar.front();
-        //cout << "Vaig a tractar el node " << node << endl;
+        //cout << "Vaig a tractar el node " << node << "----------------------- nodes tractats ->" << nodesTractats << endl;
         nodesPerTractar.pop();
 
         for (int i = 0; i < graph[node].size(); ++i) {
