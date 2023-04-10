@@ -32,3 +32,31 @@ vector<int> greedyFunction(Graph& graph, float diffusionProbability) {
     }
     return conjS;
 }
+
+vector<int> random_greedy_inverse(Graph& graph, float diffusionProbability)
+{
+
+    vector<int> S;
+    for (int vertex = 0; vertex < graph.size(); vertex++)
+    {
+        if (graph[vertex].size() > 1)
+            S.push_back(vertex);
+    }
+
+    random_shuffle(S.begin(), S.end());
+
+    vector<int> S2;
+    for (int i = 0; i < S.size(); i++)
+    {
+        if (i % 5 != 0) {
+            S2.push_back(S[i]);
+        }
+    }
+
+    int total_active = independentCascade(graph, S2, diffusionProbability);
+    if (total_active < graph.size())
+    {
+        cout << "problema, nomes hem activat: " << total_active << " de " << graph.size() << endl;
+    }
+    return S2;
+}

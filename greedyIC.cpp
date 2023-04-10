@@ -13,7 +13,7 @@ int main(int argc, char const *argv[]) {
     auto fi = chrono::high_resolution_clock::now();
     auto temps = chrono::duration_cast<chrono::microseconds>(fi - ini);
 
-    cout << "ALGORITME: GREEDYIC" << endl;
+    cout << "ALGORITME: GREEDY IC" << endl;
     cout << "INPUT: " << filename << endl;
     cout << "OUTPUT: " << endl;
     cout << "\t#S = " << conjS.size() << endl;
