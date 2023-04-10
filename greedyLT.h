@@ -42,6 +42,7 @@ vector<int> greedy(Graph &graph, float r)
 
 vector<int> random_greedy_inverse(Graph &graph, float r)
 {
+
     vector<int> S;
     for (int vertex = 0; vertex < graph.size(); vertex++)
     {

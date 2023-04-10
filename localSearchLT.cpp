@@ -7,6 +7,8 @@ int main(int argc, char const *argv[])
     float r = 0.5;
     Graph graph = read_graph(filename);
 
+    cout << "graph size: " << graph.size() << endl;
+
     //let's count the time of the metod greedy
     auto ini = chrono::high_resolution_clock::now();
     vector<int> S = localSearch(graph, r);
